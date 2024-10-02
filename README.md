@@ -1,4 +1,4 @@
-![Logo_Politecnico_Milano](https://github.com/user-attachments/assets/979e8edb-0b53-4ad0-b4d4-297af0080bf6)
+    ![Logo_Politecnico_Milano](https://github.com/user-attachments/assets/979e8edb-0b53-4ad0-b4d4-297af0080bf6)
 
 # Heart Rate Extraction from Skin Videos using Photoplethysmography
 
@@ -32,10 +32,10 @@ Statistical Analysis: Computing the area and eccentricity of the detected region
 Heart Rate Estimation: Calculating and displaying key metrics such as mean area, eccentricity, and video intensity to provide insights into the cardiac signal.
 ### Key Functions Used
 imread(), im2gray(): For loading and processing the image.
+
 bwboundaries(), regionprops(): To detect and analyze objects in the image.
+
 std2(): For calculating the standard deviation of pixel intensities, crucial for tracking blood volume changes.
+
 ## Conclusion
 This project successfully demonstrates the use of photoplethysmography to extract heart rate from a video of human skin. By isolating the red channel and focusing on regions with significant intensity variations, the heart rate signal can be extracted from the video data.
-
-## Future Work
-Further improvements could involve refining the method to enhance the signal-to-noise ratio and applying more sophisticated filtering techniques to better isolate the cardiac signal from background noise.
