@@ -1,6 +1,6 @@
 ![Logo_Politecnico_Milano](https://github.com/user-attachments/assets/979e8edb-0b53-4ad0-b4d4-297af0080bf6)
 
-# Heart Rate Extraction from Skin Videos using Photoplethysmography
+# Heart Rate Extraction from Skin Videos using Photoplethysmography (PPG)
 
 This project implements a method for extracting heart rate information from a video of human skin using photoplethysmography (PPG). Photoplethysmography measures changes in blood volume by analyzing variations in light absorption through the skin, allowing for the derivation of the heart rate based on these fluctuations.
 
