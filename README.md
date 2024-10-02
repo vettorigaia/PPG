@@ -27,7 +27,7 @@ The code is structured to load and process the video frames, extract the red cha
 
 Below are the key functions and their purposes:
 ### Key Functions Used
-"VideoReader": Loads the video file and extracts individual frames into a structured array for analysis.
+`VideoReader`: Loads the video file and extracts individual frames into a structured array for analysis.
 
 'read': Retrieves each frame from the video and stores it in the mov structure.
 
