@@ -11,31 +11,33 @@ Photoplethysmography is a non-invasive technique that detects changes in blood v
 The project focuses on the red channel of the video, as hemoglobin in the blood absorbs more light in the red spectrum, making it ideal for detecting blood volume changes.
 
 ## Methodology
-### Red Channel Extraction:
-The video frames are processed by isolating the red channel to focus on blood volume changes.
-### Pixel-wise Intensity Analysis:
-For each pixel in the video, the standard deviation of the intensity values across frames is calculated. This helps identify regions where the cardiac signal is most evident.
-### Parametric Image Construction:
-A parametric image is created where pixel intensity represents the standard deviation of each pixel over time. Regions with higher intensity values (standard deviation) correspond to areas with significant blood volume changes, making them ideal for extracting heart rate information.
-### Heart Rate Signal Extraction:
-By calculating the standard deviation for each frame (using MATLAB’s std2() function), a time-series signal is generated. This signal represents the changes in blood volume over time, allowing for the extraction of heart rate by identifying the periodic pattern typical of systole and diastole.
-### Analysis of Specific Regions:
-The analysis showed that the most informative areas for heart rate extraction were located in the upper-right and lower-right corners of the video. When the algorithm was applied to different regions of the video, only the right-hand side areas provided a clear cardiac signal, while the left-hand side contained mostly noise.
+### Video Frame Extraction: 
+The video (IMG_2033.mov) is loaded, and each frame is extracted and stored in a structured array. The red component of each frame is isolated for analysis.
+### Standard Deviation Calculation: 
+For each pixel in the video, the intensity variation over time is computed as a time series. The standard deviation of each pixel’s intensity across all frames is then calculated and stored in a parametric image.
+### Heart Rate Visualization: 
+The areas in the parametric image with the highest standard deviation—specifically the top right and bottom right corners—are identified as containing the most relevant information for heart rate extraction. These areas exhibit the characteristic systolic and diastolic patterns of blood flow.
+### Signal Validation: 
+By plotting the overall standard deviation of each frame (using the std2() function), a signal resembling the typical waveform of blood pressure variation can be observed, which allows for heart rate determination.
 ### Results
 The processed video data shows that the right-hand regions of the frame contain the most valuable information for heart rate extraction. This is confirmed by the periodic patterns observed in the time-series graph of the standard deviation, which corresponds to the systolic and diastolic phases of the cardiac cycle.
 
 ## Code Details
-The MATLAB code implements the following steps:
+The code is structured to load and process the video frames, extract the red channel, compute pixel-level standard deviations, and visualize the relevant results. 
 
-Image Pre-processing: Loading and processing the input image to extract the red channel and apply morphological operations to isolate areas of interest.
-Statistical Analysis: Computing the area and eccentricity of the detected regions, along with the standard deviation of pixel intensities to identify variations over time.
-Heart Rate Estimation: Calculating and displaying key metrics such as mean area, eccentricity, and video intensity to provide insights into the cardiac signal.
+Below are the key functions and their purposes:
 ### Key Functions Used
-imread(), im2gray(): For loading and processing the image.
+VideoReader: Loads the video file and extracts individual frames into a structured array for analysis.
 
-bwboundaries(), regionprops(): To detect and analyze objects in the image.
+read: Retrieves each frame from the video and stores it in the mov structure.
 
-std2(): For calculating the standard deviation of pixel intensities, crucial for tracking blood volume changes.
+std2(): Computes the standard deviation of pixel intensities across all frames, allowing for the extraction of the cardiac signal.
+
+imshow(): Displays the parametric image of standard deviations to highlight regions with significant blood flow variations.
+
+colormap('turbo'): Enhances visualization of the parametric image by applying a color map that highlights intensity variations effectively.
+
+The process iterates over all pixels in each frame to calculate the time-series standard deviation for every pixel, and the result is stored in a parametric image that visually identifies regions of interest in terms of heart rate signal extraction.
 
 ## Conclusion
 This project successfully demonstrates the use of photoplethysmography to extract heart rate from a video of human skin. By isolating the red channel and focusing on regions with significant intensity variations, the heart rate signal can be extracted from the video data.
