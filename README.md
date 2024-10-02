@@ -1,4 +1,4 @@
-    ![Logo_Politecnico_Milano](https://github.com/user-attachments/assets/979e8edb-0b53-4ad0-b4d4-297af0080bf6)
+![Logo_Politecnico_Milano](https://github.com/user-attachments/assets/979e8edb-0b53-4ad0-b4d4-297af0080bf6)
 
 # Heart Rate Extraction from Skin Videos using Photoplethysmography
 
