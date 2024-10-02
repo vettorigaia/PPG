@@ -22,6 +22,11 @@ By plotting the overall standard deviation of each frame (using the std2() funct
 ### Results
 The processed video data shows that the right-hand regions of the frame contain the most valuable information for heart rate extraction. This is confirmed by the periodic patterns observed in the time-series graph of the standard deviation, which corresponds to the systolic and diastolic phases of the cardiac cycle.
 
+![Schermata 2024-10-02 alle 19 10 30](https://github.com/user-attachments/assets/926f3879-ebba-4e8e-bfbc-ddb9f50f8b97)
+![Schermata 2024-10-02 alle 19 10 51](https://github.com/user-attachments/assets/9f0d7610-f9e6-4627-be33-4f7550979d67)
+
+
+
 ## Code Details
 The code is structured to load and process the video frames, extract the red channel, compute pixel-level standard deviations, and visualize the relevant results. 
 
