@@ -29,13 +29,13 @@ Below are the key functions and their purposes:
 ### Key Functions Used
 `VideoReader`: Loads the video file and extracts individual frames into a structured array for analysis.
 
-'read': Retrieves each frame from the video and stores it in the mov structure.
+`read`: Retrieves each frame from the video and stores it in the mov structure.
 
-'std2()': Computes the standard deviation of pixel intensities across all frames, allowing for the extraction of the cardiac signal.
+`std2()`: Computes the standard deviation of pixel intensities across all frames, allowing for the extraction of the cardiac signal.
 
-'imshow()': Displays the parametric image of standard deviations to highlight regions with significant blood flow variations.
+`imshow()`: Displays the parametric image of standard deviations to highlight regions with significant blood flow variations.
 
-'colormap('turbo')': Enhances visualization of the parametric image by applying a color map that highlights intensity variations effectively.
+`colormap('turbo')`: Enhances visualization of the parametric image by applying a color map that highlights intensity variations effectively.
 
 The process iterates over all pixels in each frame to calculate the time-series standard deviation for every pixel, and the result is stored in a parametric image that visually identifies regions of interest in terms of heart rate signal extraction.
 
